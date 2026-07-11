@@ -14,11 +14,6 @@ import utils.DriverFactoryUtils;
 public class BaseClass {
 	Logger log;
 	
-	public WebDriver getDriver() {
-		//this will return a WebDriver object
-		return DriverFactoryUtils.getDriver();
-	}
-
 	@BeforeMethod
 	public void setup() {
 
