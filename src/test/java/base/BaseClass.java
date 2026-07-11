@@ -14,6 +14,7 @@ import utils.DriverFactoryUtils;
 public class BaseClass {
 	Logger log;
 	
+
 	public WebDriver getDriver() {
 		//this comment is added to demo merge conflict
 		//this will return a WebDriver object
