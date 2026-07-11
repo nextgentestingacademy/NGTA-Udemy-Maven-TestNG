@@ -15,6 +15,7 @@ public class BaseClass {
 	Logger log;
 	
 	public WebDriver getDriver() {
+		//this will return a WebDriver object
 		return DriverFactoryUtils.getDriver();
 	}
 
