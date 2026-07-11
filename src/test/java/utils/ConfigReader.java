@@ -22,6 +22,14 @@ public class ConfigReader {
 		if(prop == null) {
 			loadProperties();
 		}
+		
+		 // Check if Jenkins passed the value
+        String value = System.getProperty(key);
+
+        if(value != null && !value.isBlank()) {
+            return value;
+        }
+		
 		return prop.getProperty(key);
 	}
 }
