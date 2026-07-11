@@ -26,10 +26,10 @@ public class BaseClass {
 
 		DriverFactoryUtils.initDriver();
 		WebDriver driver = getDriver();
-		String env = ConfigReader.fetchValue("env");
+		
+		String env =  ConfigReader.fetchValue("env");
 		String url = ConfigReader.fetchValue(env.toLowerCase() + ".url");
 		driver.get(url);
-		//		driver.get(ConfigReader.fetchValue("url"));
 		driver.manage().window().maximize();
 		
 		// implicit wait can be set here if needed

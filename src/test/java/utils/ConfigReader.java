@@ -23,13 +23,14 @@ public class ConfigReader {
 			loadProperties();
 		}
 		
-		 // Check if Jenkins passed the value
-        String value = System.getProperty(key);
-
-        if(value != null && !value.isBlank()) {
-            return value;
-        }
+		//Check if Jenkins return any value
+		String value = System.getProperty(key);
 		
+		if(value!=null && !value.isBlank()) {
+			return value;
+		}
+		
+		//value will be fetched from config.properties
 		return prop.getProperty(key);
 	}
 }
